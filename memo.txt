@@ -1,0 +1,2 @@
+■コントローラーの作成　リクエストを処理する役割を担っている
+$ rails generate controller Messages index
