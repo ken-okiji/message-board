@@ -1,0 +1,6 @@
+■Railsが起動しない時
+ Apacheが動いたままになっているのが理由
+ sudo service apache2 stop
+ 
+■Modelの作成
+　ユーザーが投稿した情報を
