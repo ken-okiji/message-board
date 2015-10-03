@@ -1,7 +1,0 @@
-■コントローラーの作成　リクエストを処理する役割を担っている
-$ rails generate controller Messages index
-
-→　indexアクションも一緒に作成。コントローラとビューの作成が完了。
-
-■routes.rb の設定
-ルートURL(/)にアクセスしたときに作成したコントローラを呼び出す設定。
