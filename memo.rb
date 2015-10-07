@@ -97,3 +97,6 @@ class Message < ActiveRecord::Base
     # 内容は必須入力かつ2文字以上30文字以下
     validates :body , length: {minimum: 2 , maximum: 30 } , presence: true
 end
+
+#部分テンプレート（パーシャル）の作成
+ファイル名の最初に_を書く
