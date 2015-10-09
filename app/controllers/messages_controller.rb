@@ -7,6 +7,7 @@ class MessagesController < ApplicationController
   end
   
   def edit
+    flash.now[:alert] = "メッセージの保存に失敗しました。"
   end
 
   def update
