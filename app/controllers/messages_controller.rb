@@ -33,7 +33,7 @@ class MessagesController < ApplicationController
       #メッセージが保存できなかった時
       @messages = Message.all
       flash.now[:alert] = "メッセージの保存に失敗しました。"
-      render 'index, edit'
+      render 'index'
     end
   end
   
