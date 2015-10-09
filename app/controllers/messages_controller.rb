@@ -7,7 +7,6 @@ class MessagesController < ApplicationController
   end
   
   def edit
-    flash.now[:alert] = "メッセージの保存に失敗しました。"
   end
 
   def update
@@ -16,6 +15,7 @@ class MessagesController < ApplicationController
     redirect_to root_path , notice: 'メッセージを編集しました'
     else
       #保存に失敗した場合は編集画面へ戻す
+      flash.now[:alert] = "メッセージの保存に失敗しました。"
       render 'edit'
     end
   end
