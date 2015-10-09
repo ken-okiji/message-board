@@ -1,4 +1,17 @@
 <%= form_for(@message) do |f| %>
+    <% if @message.errors.present? %>
+      <div class="alert alert-danger">
+        <%= alert %>
+        <ul>
+          <% @message.errors.full_messages.each do |full_message| %>
+            <li>
+              <%= full_message %>
+            </li>
+          <% end %> 
+        </ul>
+      </div>
+    <% end %>
+    
     <div class="form-group">
         <div class="row">
             <label class="col-lg-1 control-label">名前：</label>
@@ -28,17 +41,4 @@
             <%= f.submit class: "btn btn-sm btn-primary" %>
         </div>
     </div>
-    
-    <% if @message.errors.present? %>
-      <div class="alert alert-danger">
-        <%= alert %>
-        <ul>
-          <% @message.errors.full_messages.each do |full_message| %>
-            <li>
-              <%= full_message %>
-            </li>
-          <% end %> 
-        </ul>
-      </div>
-    <% end %>
 <% end %>
